@@ -5,18 +5,22 @@ Library  Selenium2Library
 *** Variables ***
 ${BROWSER}   chrome
 ${SELSPEED}  0.0s
+${LOGIN URL}  https://practicetestautomation.com/practice-test-login/
 
 *** Test Cases ***
 Verify Successful Login
     [Setup]  Run Keywords  Open Browser  https://practicetestautomation.com/practice-test-login/  ${BROWSER}
     ...              AND   Set Selenium Speed  ${SELSPEED}
     # open    https://practicetestautomation.com/practice-test-login/
+    Login Page Should Be Open
     click    id=username
     type    id=username    student
     click    id=password
     type    id=password    Password123
     click    id=submit
     open    https://practicetestautomation.com/logged-in-successfully/
+    Title Should Be    Logged In Successfully | Practice Test Automation
+    verifyElementPresent  link=Log out
     click    link=Log out
     open    https://practicetestautomation.com/practice-test-login/
     [Teardown]  Close Browser
@@ -47,6 +51,19 @@ List value adding
 
 
 *** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Browser Implicit Wait    5
+    Set Selenium Speed    ${SELSPEED}
+    Login Page Should Be Open
+Login Page Should Be Open
+    Title Should Be    Test Login | Practice Test Automation
+
+Welcome Page Should Be Open
+    Location Should Be    ${LOGIN URL}
+    Title Should Be    Logged In Successfully | Practice Test Automation
+
 open
     [Arguments]    ${element}
     Go To          ${element}

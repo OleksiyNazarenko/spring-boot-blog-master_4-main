@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230526 19:50:57.278" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230531 17:26:33.991" rpa="false" schemaversion="3">
 <suite id="s1" name="TC login" source="C:\Users\olna0715\Documents\My Folder\Univer\TA\spring-boot-blog-master_4-main\spring-boot-blog-master_3-main\src\test\robotframework\acceptance\TC_login.robot">
-<test id="s1-t1" name="Verify Successful Login" line="10">
+<test id="s1-t1" name="Verify Successful Login" line="11">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Open Browser</arg>
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
@@ -14,26 +14,35 @@
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230526 19:50:57.897" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
-<msg timestamp="20230526 19:50:57.915" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230526 19:50:57.896" endtime="20230526 19:51:06.691"/>
+<msg timestamp="20230531 17:26:34.478" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<msg timestamp="20230531 17:26:34.496" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230531 17:26:34.477" endtime="20230531 17:26:40.604"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${SELSPEED}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230526 19:51:06.691" endtime="20230526 19:51:06.692"/>
+<status status="PASS" starttime="20230531 17:26:40.605" endtime="20230531 17:26:40.605"/>
 </kw>
-<status status="PASS" starttime="20230526 19:50:57.896" endtime="20230526 19:51:06.692"/>
+<status status="PASS" starttime="20230531 17:26:34.477" endtime="20230531 17:26:40.606"/>
+</kw>
+<kw name="Login Page Should Be Open">
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Test Login | Practice Test Automation</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230531 17:26:40.620" level="INFO">Page title is 'Test Login | Practice Test Automation'.</msg>
+<status status="PASS" starttime="20230531 17:26:40.607" endtime="20230531 17:26:40.621"/>
+</kw>
+<status status="PASS" starttime="20230531 17:26:40.606" endtime="20230531 17:26:40.621"/>
 </kw>
 <kw name="click">
 <arg>id=username</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:06.697" level="INFO">Clicking element 'id=username'.</msg>
-<status status="PASS" starttime="20230526 19:51:06.694" endtime="20230526 19:51:06.864"/>
+<msg timestamp="20230531 17:26:40.624" level="INFO">Clicking element 'id=username'.</msg>
+<status status="PASS" starttime="20230531 17:26:40.622" endtime="20230531 17:26:40.765"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:06.692" endtime="20230526 19:51:06.864"/>
+<status status="PASS" starttime="20230531 17:26:40.621" endtime="20230531 17:26:40.766"/>
 </kw>
 <kw name="type">
 <arg>id=username</arg>
@@ -42,20 +51,20 @@
 <arg>${element}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:06.867" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20230526 19:51:06.865" endtime="20230526 19:51:07.083"/>
+<msg timestamp="20230531 17:26:40.770" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20230531 17:26:40.767" endtime="20230531 17:26:41.145"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:06.865" endtime="20230526 19:51:07.084"/>
+<status status="PASS" starttime="20230531 17:26:40.766" endtime="20230531 17:26:41.146"/>
 </kw>
 <kw name="click">
 <arg>id=password</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:07.088" level="INFO">Clicking element 'id=password'.</msg>
-<status status="PASS" starttime="20230526 19:51:07.086" endtime="20230526 19:51:07.210"/>
+<msg timestamp="20230531 17:26:41.148" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230531 17:26:41.147" endtime="20230531 17:26:41.307"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:07.084" endtime="20230526 19:51:07.211"/>
+<status status="PASS" starttime="20230531 17:26:41.146" endtime="20230531 17:26:41.307"/>
 </kw>
 <kw name="type">
 <arg>id=password</arg>
@@ -64,58 +73,74 @@
 <arg>${element}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:07.212" level="INFO">Typing text 'Password123' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20230526 19:51:07.211" endtime="20230526 19:51:07.437"/>
+<msg timestamp="20230531 17:26:41.310" level="INFO">Typing text 'Password123' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230531 17:26:41.308" endtime="20230531 17:26:41.888"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:07.211" endtime="20230526 19:51:07.438"/>
+<status status="PASS" starttime="20230531 17:26:41.307" endtime="20230531 17:26:41.889"/>
 </kw>
 <kw name="click">
 <arg>id=submit</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:07.440" level="INFO">Clicking element 'id=submit'.</msg>
-<status status="PASS" starttime="20230526 19:51:07.439" endtime="20230526 19:51:09.398"/>
+<msg timestamp="20230531 17:26:41.891" level="INFO">Clicking element 'id=submit'.</msg>
+<status status="PASS" starttime="20230531 17:26:41.890" endtime="20230531 17:26:43.196"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:07.438" endtime="20230526 19:51:09.398"/>
+<status status="PASS" starttime="20230531 17:26:41.889" endtime="20230531 17:26:43.196"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/logged-in-successfully/</arg>
 <kw name="Go To" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230526 19:51:09.401" level="INFO">Opening url 'https://practicetestautomation.com/logged-in-successfully/'</msg>
-<status status="PASS" starttime="20230526 19:51:09.400" endtime="20230526 19:51:09.925"/>
+<msg timestamp="20230531 17:26:43.197" level="INFO">Opening url 'https://practicetestautomation.com/logged-in-successfully/'</msg>
+<status status="PASS" starttime="20230531 17:26:43.197" endtime="20230531 17:26:43.751"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:09.399" endtime="20230526 19:51:09.926"/>
+<status status="PASS" starttime="20230531 17:26:43.197" endtime="20230531 17:26:43.752"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Logged In Successfully | Practice Test Automation</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230531 17:26:43.763" level="INFO">Page title is 'Logged In Successfully | Practice Test Automation'.</msg>
+<status status="PASS" starttime="20230531 17:26:43.752" endtime="20230531 17:26:43.763"/>
+</kw>
+<kw name="verifyElementPresent">
+<arg>link=Log out</arg>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230531 17:26:43.801" level="INFO">Current page contains element 'link=Log out'.</msg>
+<status status="PASS" starttime="20230531 17:26:43.764" endtime="20230531 17:26:43.802"/>
+</kw>
+<status status="PASS" starttime="20230531 17:26:43.763" endtime="20230531 17:26:43.802"/>
 </kw>
 <kw name="click">
 <arg>link=Log out</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:09.928" level="INFO">Clicking element 'link=Log out'.</msg>
-<status status="PASS" starttime="20230526 19:51:09.927" endtime="20230526 19:51:10.574"/>
+<msg timestamp="20230531 17:26:43.804" level="INFO">Clicking element 'link=Log out'.</msg>
+<status status="PASS" starttime="20230531 17:26:43.803" endtime="20230531 17:26:44.482"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:09.926" endtime="20230526 19:51:10.574"/>
+<status status="PASS" starttime="20230531 17:26:43.802" endtime="20230531 17:26:44.483"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
 <kw name="Go To" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230526 19:51:10.577" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
-<status status="PASS" starttime="20230526 19:51:10.576" endtime="20230526 19:51:11.062"/>
+<msg timestamp="20230531 17:26:44.485" level="INFO">Opening url 'https://practicetestautomation.com/practice-test-login/'</msg>
+<status status="PASS" starttime="20230531 17:26:44.484" endtime="20230531 17:26:44.994"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:10.575" endtime="20230526 19:51:11.062"/>
+<status status="PASS" starttime="20230531 17:26:44.483" endtime="20230531 17:26:44.994"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230526 19:51:11.063" endtime="20230526 19:51:15.130"/>
+<status status="PASS" starttime="20230531 17:26:44.994" endtime="20230531 17:26:50.132"/>
 </kw>
-<status status="PASS" starttime="20230526 19:50:57.895" endtime="20230526 19:51:15.130"/>
+<status status="PASS" starttime="20230531 17:26:34.476" endtime="20230531 17:26:50.132"/>
 </test>
-<test id="s1-t2" name="List value adding" line="24">
+<test id="s1-t2" name="List value adding" line="28">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Open Browser</arg>
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
@@ -128,26 +153,26 @@
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230526 19:51:15.135" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
-<msg timestamp="20230526 19:51:15.177" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230526 19:51:15.134" endtime="20230526 19:51:26.085"/>
+<msg timestamp="20230531 17:26:50.135" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<msg timestamp="20230531 17:26:50.161" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230531 17:26:50.134" endtime="20230531 17:26:58.464"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${SELSPEED}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230526 19:51:26.086" endtime="20230526 19:51:26.087"/>
+<status status="PASS" starttime="20230531 17:26:58.464" endtime="20230531 17:26:58.466"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:15.133" endtime="20230526 19:51:26.087"/>
+<status status="PASS" starttime="20230531 17:26:50.134" endtime="20230531 17:26:58.466"/>
 </kw>
 <kw name="click">
 <arg>id=username</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:26.090" level="INFO">Clicking element 'id=username'.</msg>
-<status status="PASS" starttime="20230526 19:51:26.089" endtime="20230526 19:51:26.289"/>
+<msg timestamp="20230531 17:26:58.469" level="INFO">Clicking element 'id=username'.</msg>
+<status status="PASS" starttime="20230531 17:26:58.467" endtime="20230531 17:26:58.632"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:26.088" endtime="20230526 19:51:26.289"/>
+<status status="PASS" starttime="20230531 17:26:58.466" endtime="20230531 17:26:58.633"/>
 </kw>
 <kw name="type">
 <arg>id=username</arg>
@@ -156,20 +181,20 @@
 <arg>${element}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:26.291" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20230526 19:51:26.290" endtime="20230526 19:51:26.669"/>
+<msg timestamp="20230531 17:26:58.636" level="INFO">Typing text 'student' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20230531 17:26:58.634" endtime="20230531 17:26:58.955"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:26.289" endtime="20230526 19:51:26.669"/>
+<status status="PASS" starttime="20230531 17:26:58.633" endtime="20230531 17:26:58.955"/>
 </kw>
 <kw name="click">
 <arg>id=password</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:26.671" level="INFO">Clicking element 'id=password'.</msg>
-<status status="PASS" starttime="20230526 19:51:26.670" endtime="20230526 19:51:26.773"/>
+<msg timestamp="20230531 17:26:58.957" level="INFO">Clicking element 'id=password'.</msg>
+<status status="PASS" starttime="20230531 17:26:58.956" endtime="20230531 17:26:59.182"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:26.669" endtime="20230526 19:51:26.773"/>
+<status status="PASS" starttime="20230531 17:26:58.955" endtime="20230531 17:26:59.183"/>
 </kw>
 <kw name="type">
 <arg>id=password</arg>
@@ -178,95 +203,95 @@
 <arg>${element}</arg>
 <arg>${value}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:26.775" level="INFO">Typing text 'Password123' into text field 'id=password'.</msg>
-<status status="PASS" starttime="20230526 19:51:26.774" endtime="20230526 19:51:26.954"/>
+<msg timestamp="20230531 17:26:59.185" level="INFO">Typing text 'Password123' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230531 17:26:59.184" endtime="20230531 17:26:59.507"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:26.773" endtime="20230526 19:51:26.954"/>
+<status status="PASS" starttime="20230531 17:26:59.183" endtime="20230531 17:26:59.508"/>
 </kw>
 <kw name="click">
 <arg>id=submit</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:26.956" level="INFO">Clicking element 'id=submit'.</msg>
-<status status="PASS" starttime="20230526 19:51:26.955" endtime="20230526 19:51:28.735"/>
+<msg timestamp="20230531 17:26:59.510" level="INFO">Clicking element 'id=submit'.</msg>
+<status status="PASS" starttime="20230531 17:26:59.509" endtime="20230531 17:27:00.873"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:26.954" endtime="20230526 19:51:28.736"/>
+<status status="PASS" starttime="20230531 17:26:59.508" endtime="20230531 17:27:00.873"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/logged-in-successfully/</arg>
 <kw name="Go To" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230526 19:51:28.737" level="INFO">Opening url 'https://practicetestautomation.com/logged-in-successfully/'</msg>
-<status status="PASS" starttime="20230526 19:51:28.736" endtime="20230526 19:51:29.254"/>
+<msg timestamp="20230531 17:27:00.875" level="INFO">Opening url 'https://practicetestautomation.com/logged-in-successfully/'</msg>
+<status status="PASS" starttime="20230531 17:27:00.874" endtime="20230531 17:27:01.887"/>
 </kw>
-<status status="PASS" starttime="20230526 19:51:28.736" endtime="20230526 19:51:29.254"/>
+<status status="PASS" starttime="20230531 17:27:00.873" endtime="20230531 17:27:01.888"/>
 </kw>
 <kw name="click">
 <arg>link=Practice</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230526 19:51:29.258" level="INFO">Clicking element 'link=Practice'.</msg>
-<msg timestamp="20230526 19:51:29.547" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230526 19:51:29.547" level="FAIL">Element with locator 'link=Practice' not found.</msg>
-<status status="FAIL" starttime="20230526 19:51:29.256" endtime="20230526 19:51:29.562"/>
+<msg timestamp="20230531 17:27:01.890" level="INFO">Clicking element 'link=Practice'.</msg>
+<msg timestamp="20230531 17:27:02.186" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230531 17:27:02.186" level="FAIL">Element with locator 'link=Practice' not found.</msg>
+<status status="FAIL" starttime="20230531 17:27:01.889" endtime="20230531 17:27:02.195"/>
 </kw>
-<status status="FAIL" starttime="20230526 19:51:29.255" endtime="20230526 19:51:29.562"/>
+<status status="FAIL" starttime="20230531 17:27:01.888" endtime="20230531 17:27:02.195"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/practice/</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.563" endtime="20230526 19:51:29.563"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.196" endtime="20230531 17:27:02.196"/>
 </kw>
 <kw name="click">
 <arg>link=Test Exceptions</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.563" endtime="20230526 19:51:29.563"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.196" endtime="20230531 17:27:02.196"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/practice-test-exceptions/</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.563" endtime="20230526 19:51:29.564"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.196" endtime="20230531 17:27:02.196"/>
 </kw>
 <kw name="click">
 <arg>id=add_btn</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.564" endtime="20230526 19:51:29.564"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.196" endtime="20230531 17:27:02.197"/>
 </kw>
 <kw name="click">
 <arg>xpath=//div[@id='row2']/input</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.564" endtime="20230526 19:51:29.564"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.197" endtime="20230531 17:27:02.197"/>
 </kw>
 <kw name="type">
 <arg>xpath=//div[@id='row2']/input</arg>
 <arg>Beer</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.564" endtime="20230526 19:51:29.564"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.197" endtime="20230531 17:27:02.197"/>
 </kw>
 <kw name="click">
 <arg>xpath=//div[@id='row2']/button</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.564" endtime="20230526 19:51:29.564"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.197" endtime="20230531 17:27:02.197"/>
 </kw>
 <kw name="click">
 <arg>link=Practice</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.565" endtime="20230526 19:51:29.565"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.197" endtime="20230531 17:27:02.197"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/practice/</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.565" endtime="20230526 19:51:29.565"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.197" endtime="20230531 17:27:02.198"/>
 </kw>
 <kw name="click">
 <arg>link=Test Login Page</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.565" endtime="20230526 19:51:29.565"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.198" endtime="20230531 17:27:02.198"/>
 </kw>
 <kw name="open">
 <arg>https://practicetestautomation.com/practice-test-login/</arg>
-<status status="NOT RUN" starttime="20230526 19:51:29.565" endtime="20230526 19:51:29.565"/>
+<status status="NOT RUN" starttime="20230531 17:27:02.198" endtime="20230531 17:27:02.198"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230526 19:51:29.566" endtime="20230526 19:51:32.769"/>
+<status status="PASS" starttime="20230531 17:27:02.198" endtime="20230531 17:27:08.392"/>
 </kw>
-<status status="FAIL" starttime="20230526 19:51:15.131" endtime="20230526 19:51:32.769">Element with locator 'link=Practice' not found.</status>
+<status status="FAIL" starttime="20230531 17:26:50.133" endtime="20230531 17:27:08.393">Element with locator 'link=Practice' not found.</status>
 </test>
-<status status="FAIL" starttime="20230526 19:50:57.283" endtime="20230526 19:51:32.771"/>
+<status status="FAIL" starttime="20230531 17:26:33.998" endtime="20230531 17:27:08.394"/>
 </suite>
 <statistics>
 <total>
